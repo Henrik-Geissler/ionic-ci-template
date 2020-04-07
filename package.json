@@ -46,7 +46,7 @@
     "test:e2e": "NODE_ENV=debug cucumber-js -p default",
     "test:unit": "react-scripts test --watchAll --coverage",
     "test-async:all": "yarn test-async:unit && yarn test-async:e2e",
-    "test-async:e2e": "echo \"cd \"`pwd`\";yarn test:e2e;exit;\" > \"`pwd`\"/test/E2E_Test.command; chmod +x \"`pwd`\"/test/E2E_Test.command; open \"`pwd`\"/test/E2E_Test.command",
+    "test-async:e2e": "echo \"cd \"`pwd`\";yarn test:e2e;\" > \"`pwd`\"/test/E2E_Test.command; chmod +x \"`pwd`\"/test/E2E_Test.command; open \"`pwd`\"/test/E2E_Test.command",
     "test-async:unit": "echo \"cd \"`pwd`\";yarn test:unit;exit;\" > \"`pwd`\"/test/UNIT_Test.command; chmod +x \"`pwd`\"/test/UNIT_Test.command; open \"`pwd`\"/test/UNIT_Test.command",
     "test-ci:e2e": "cucumber-js -p default",
     "test-ci:unit": "react-scripts test --watchAll=false --coverage --forceExit --detectOpenHandles --ci",
