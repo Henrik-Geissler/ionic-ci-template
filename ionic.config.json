@@ -1,5 +1,5 @@
 {
-  "name": "sidemenu",
+  "name": "ionic-ci-template",
   "integrations": {
     "capacitor": {}
   },

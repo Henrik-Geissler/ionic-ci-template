@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "sidemenu",
+  "appId": "de.henrik-geissler.ionic-ci-template",
+  "appName": "ionic-ci-template",
   "bundledWebRuntime": false,
   "npmClient": "yarn",
   "webDir": "build",

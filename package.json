@@ -1,6 +1,6 @@
 {
-  "name": "sidemenu",
-  "version": "0.0.1",
+  "name": "ionic-ci-template",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {
     "@capacitor/core": "2.0.0",
@@ -47,5 +47,5 @@
   "devDependencies": {
     "@capacitor/cli": "2.0.0"
   },
-  "description": "An Ionic project"
+  "description": "A CI/CD setup of the Ionic Starter Template with Linting, UNIT & E2E Testing and Continuous Delivery"
 }
