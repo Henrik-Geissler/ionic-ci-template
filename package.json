@@ -13,7 +13,9 @@
   "homepage": "https://henrik-geissler.github.io/ionic-ci-template",
   "dependencies": {
     "@capacitor/core": "^2.0.0",
+    "@ionic/pwa-elements": "^1.5.1",
     "@ionic/react": "^5.0.7",
+    "@ionic/react-hooks": "^0.0.6",
     "@ionic/react-router": "^5.0.7",
     "@testing-library/jest-dom": "^5.3.0",
     "@testing-library/react": "^10.0.2",
