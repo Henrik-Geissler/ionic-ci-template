@@ -8,9 +8,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Henrik-Geissler/WebApp.git"
+    "url": "https://github.com/Henrik-Geissler/ionic-ci-template.git"
   },
-  "homepage": "https://henrik-geissler.github.io/WebApp",
+  "homepage": "https://henrik-geissler.github.io/ionic-ci-template",
   "dependencies": {
     "@capacitor/core": "^2.0.0",
     "@ionic/react": "^5.0.7",
@@ -95,5 +95,5 @@
       "src/**/{!(index),}.tsx"
     ]
   },
-  "description": "A CI/CD Setup of the Ionic Starter Template with CI Linting, CI UNIT Testing, CI E2E Testing, CD Prereleasing, CD Deploying and generic testing libaries."
+  "description": "A CI/CD setup of the Ionic Starter Template with Linting, UNIT & E2E Testing and Continuous Delivery"
 }
