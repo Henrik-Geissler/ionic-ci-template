@@ -37,7 +37,8 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "start": "PORT=3000 react-scripts start",
+    "start": "open -a Terminal \"`pwd`\" && PORT=3000 react-scripts start", 
+    "start-ci": "(sleep 30 && exit) & PORT=3000 react-scripts start",
 
     "build": "react-scripts build",
 
