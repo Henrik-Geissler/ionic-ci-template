@@ -1,0 +1,60 @@
+#####################################################
+### File Extension to Lint
+
+*.*
+!*.css
+!*.js
+!*.json
+!*.jsx
+!*.less
+!*.md
+!*.mdx
+!*.ts
+!*.tsx
+!*.yml
+
+#####################################################
+### Folder and Files to ignore
+
+public/
+package.json
+serviceWorker.ts
+LICENSE
+
+
+
+
+
+#####################################################
+### Copy from .gitignore
+
+# testing
+/test/reports
+/test/screenshots/compare
+/test/screenshots/diff
+/test/screenshots/error
+/test/*.command
+/coverage
+
+# dependencies
+/node_modules
+yarn.lock
+/.pnp
+.pnp.js
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+.vscode
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
