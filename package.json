@@ -91,7 +91,8 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/{!(index),}.tsx"
-    ]
+    ],
+    "transformIgnorePatterns":["/node_modules/"]
   },
   "description": "A CI/CD setup of the Ionic Starter Template with Linting, UNIT & E2E Testing and Continuous Delivery"
 }
