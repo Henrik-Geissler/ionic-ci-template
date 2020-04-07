@@ -1,0 +1,14 @@
+{
+  "types": [
+    {"type":"feat","section":"Features"},
+    {"type":"fix","section":"Bug Fixes"},
+    {"type":"perf","section":"Performance"},
+    {"type":"docs","section":"Documentation"},
+    {"type":"build","section":"Build System"},
+    {"type":"refactor","section":"Refactoring", "hidden": true},
+    {"type":"style","section":"Formatting", "hidden": true},
+    {"type":"test","section":"Tests", "hidden": true},
+    {"type":"build","section":"Build System", "hidden": true},
+    {"type":"ci","hidden":true}
+  ]
+}

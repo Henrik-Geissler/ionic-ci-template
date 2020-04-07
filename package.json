@@ -45,7 +45,8 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "2.0.0"
+    "@capacitor/cli": "2.0.0",
+    "standard-version": "^7.1.0"
   },
   "description": "A CI/CD setup of the Ionic Starter Template with Linting, UNIT & E2E Testing and Continuous Delivery"
 }
