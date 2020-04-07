@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  docker_build:
+    container_name: docker_build
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: docker_build:default
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
