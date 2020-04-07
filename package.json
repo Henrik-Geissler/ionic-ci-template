@@ -1,6 +1,6 @@
 {
   "name": "ionic-ci-template",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "private": true,
   "author": {
     "name": "Henrik Geissler"
@@ -39,12 +39,9 @@
   "scripts": {
     "start": "open -a Terminal \"`pwd`\" && PORT=3000 react-scripts start",
     "start-ci": "PORT=3000 react-scripts start",
-    
     "build": "react-scripts build",
-
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
-
     "test": "yarn test-async:all",
     "test:e2e": "NODE_ENV=debug cucumber-js -p default",
     "test:unit": "react-scripts test --watchAll --coverage",
@@ -53,16 +50,13 @@
     "test-async:unit": "echo \"cd \"`pwd`\";yarn test:unit;exit;\" > \"`pwd`\"/test/UNIT_Test.command; chmod +x \"`pwd`\"/test/UNIT_Test.command; open \"`pwd`\"/test/UNIT_Test.command",
     "test-ci:e2e": "cucumber-js -p default",
     "test-ci:unit": "react-scripts test --watchAll=false --coverage --forceExit --detectOpenHandles --ci",
-
     "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:gherkin-lint",
     "lint:prettier": "./node_modules/.bin/prettier --write --config ./.prettierrc \"**/*.*\" ",
     "lint:eslint": "./node_modules/.bin/eslint --fix \"**/*.*\" ",
     "lint:gherkin-lint": "./node_modules/.bin/gherkin-lint -c ./.gherkin-lintrc \"**/*.feature\"",
-
     "prerelease": "prerelease-ci",
     "prerelease-ci": "standard-version --prerelease alpha",
     "release": "git pull && standard-version",
-
     "eject": "react-scripts eject"
   },
   "browserslist": {
