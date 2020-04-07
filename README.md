@@ -7,7 +7,6 @@ A CI/CD setup of the [Ionic Starter Template](https://ionicframework.com/docs/v3
 [![David](https://img.shields.io/david/Henrik-Geissler/ionic-ci-template)](https://david-dm.org/Henrik-Geissler/ionic-ci-template)
 [![David](https://img.shields.io/david/dev/Henrik-Geissler/ionic-ci-template)](https://david-dm.org/Henrik-Geissler/ionic-ci-template?type=dev)
 [![Codecov](https://img.shields.io/codecov/c/github/Henrik-Geissler/ionic-ci-template)](https://codecov.io/gh/Henrik-Geissler/ionic-ci-template)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Henrik-Geissler/ionic-ci-template)](https://github.com/Henrik-Geissler/ionic-ci-template/releases)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Henrik-Geissler/ionic-ci-template)]()
 [![GitHub](https://img.shields.io/github/license/Henrik-Geissler/ionic-ci-template)](https://github.com/Henrik-Geissler/ionic-ci-template/blob/master/LICENSE)
 [![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/Henrik-Geissler/ionic-ci-template/react)](https://reactjs.org/)
