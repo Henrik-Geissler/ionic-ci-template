@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.1-alpha.1](https://github.com/Henrik-Geissler/ionic-ci-template/compare/v0.0.1-alpha.0...v0.0.1-alpha.1) (2020-04-07)
+
+
+### Features
+
+* **docker:** Create Docker Container ([aab2d14](https://github.com/Henrik-Geissler/ionic-ci-template/commit/aab2d14a069153a610fbea941cee51ebb4864f59))
+* **e2e:** Create E2E Test Page ([0ff7330](https://github.com/Henrik-Geissler/ionic-ci-template/commit/0ff73306de46deb62fe8265e12677b886af0c404))
+
+
+### Bug Fixes
+
+* **e2e:** fix folder structure issue ([cb06858](https://github.com/Henrik-Geissler/ionic-ci-template/commit/cb06858ab69eac33f2c2033b157562fd4a30db3f))
+* **package.json:** Correct Repository ([4bd9ea2](https://github.com/Henrik-Geissler/ionic-ci-template/commit/4bd9ea27ddd4102c837ce655503f391aae64c142))
+* **start:** issue with not async hosting ([5761cb9](https://github.com/Henrik-Geissler/ionic-ci-template/commit/5761cb95c20e74ef9a3b83d46a5bf10565172541))
+* **unittest:** Throw Screenshot missing error ([18dd440](https://github.com/Henrik-Geissler/ionic-ci-template/commit/18dd4406f4e38212b0feb32423583eef35f4aa02))
+
+
+### Documentation
+
+* **package.json:** Add seperators between scripts ([1689115](https://github.com/Henrik-Geissler/ionic-ci-template/commit/16891152a9ca80a96a8def8a9bd51406625ee1a6))
+
 ### 0.0.1-alpha.0 (2020-04-07)
 
 ### Features
