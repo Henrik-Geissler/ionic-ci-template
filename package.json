@@ -12,6 +12,7 @@
   },
   "homepage": "https://henrik-geissler.github.io/ionic-ci-template",
   "dependencies": {
+    "@capacitor/android": "^2.0.0",
     "@capacitor/core": "^2.0.0",
     "@ionic/pwa-elements": "^1.5.1",
     "@ionic/react": "^5.0.7",
@@ -92,7 +93,9 @@
     "collectCoverageFrom": [
       "src/**/{!(index),}.tsx"
     ],
-    "transformIgnorePatterns":["/node_modules/"]
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ]
   },
   "description": "A CI/CD setup of the Ionic Starter Template with Linting, UNIT & E2E Testing and Continuous Delivery"
 }
