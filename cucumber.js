@@ -1,5 +1,5 @@
 const common = [
-  'features/features/**/*.feature',
+  'features/**/*.feature',
   '--format progress-bar',
   '--format node_modules/cucumber-pretty',
   '--retry 4',
