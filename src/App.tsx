@@ -5,6 +5,7 @@ import {IonApp, IonRouterOutlet, IonSplitPane} from '@ionic/react'
 import {IonReactRouter} from '@ionic/react-router'
 import {Redirect, Route} from 'react-router-dom'
 import PropTypes from 'prop-types'
+import {images, square, triangle} from 'ionicons/icons'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css'
