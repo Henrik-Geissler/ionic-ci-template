@@ -34,13 +34,12 @@ export function usePhotoGallery() {
         filepath: fileUri.uri,
         webviewPath: Capacitor.convertFileSrc(fileUri.uri),
       }
-    } else {
-      // Use webPath to display the new image instead of base64 since it's
-      // already loaded into memory
-      return {
-        filepath: fileName,
-        webviewPath: cameraPhoto.webPath,
-      }
+    }
+    // Use webPath to display the new image instead of base64 since it's
+    // already loaded into memory
+    return {
+      filepath: fileName,
+      webviewPath: cameraPhoto.webPath,
     }
   }
 
@@ -71,7 +70,7 @@ export function usePhotoGallery() {
         : []) as Photo[]
       // If running on the web...
       if (!isPlatform('hybrid')) {
-        for (let photo of photosInStorage) {
+        for (const photo of photosInStorage) {
           const file = await readFile({
             path: photo.filepath,
             directory: FilesystemDirectory.Data,
