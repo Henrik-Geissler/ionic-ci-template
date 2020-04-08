@@ -33,6 +33,7 @@
     "@typescript-eslint/parser": "^2.26.0",
     "eslint-plugin-react": "^7.19.0",
     "ionicons": "^5.0.1",
+    "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router": "^5.1.2",
@@ -43,7 +44,7 @@
   "scripts": {
     "start": "open -a Terminal \"`pwd`\" && PORT=3000 react-scripts start",
     "start-ci": "PORT=3000 react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && ionic cap copy",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "test": "yarn test-async:all",
@@ -94,7 +95,7 @@
     "collectCoverageFrom": [
       "src/**/{!(index),}.tsx"
     ],
-    "transformIgnorePatterns":[ 
+    "transformIgnorePatterns": [
       "node_modules/(?!(@ionic))/"
     ]
   },

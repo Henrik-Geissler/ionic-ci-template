@@ -26,7 +26,7 @@ import {
   warningOutline,
   warningSharp,
 } from 'ionicons/icons'
-import './Menu.css'
+import './Menu.scss'
 
 interface MenuProps extends RouteComponentProps {
   selectedPage: string
