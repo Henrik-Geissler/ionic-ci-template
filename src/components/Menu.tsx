@@ -104,7 +104,6 @@ function Menu({selectedPage}: MenuProps): JSX.Element {
             )
           })}
         </IonList>
-
         <IonList id="labels-list">
           <IonListHeader>Labels</IonListHeader>
           {labels.map((label, index) => (
@@ -114,6 +113,9 @@ function Menu({selectedPage}: MenuProps): JSX.Element {
             </IonItem>
           ))}
         </IonList>
+        <div className="glitch" data-text="GLITCH">
+          GLITCH
+        </div>
       </IonContent>
     </IonMenu>
   )

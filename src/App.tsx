@@ -1,5 +1,5 @@
 import Menu from './components/Menu'
-import Page from './pages/Page'
+import Page from './pages/Page1'
 import React, {useState} from 'react'
 import {IonApp, IonRouterOutlet, IonSplitPane} from '@ionic/react'
 import {IonReactRouter} from '@ionic/react-router'
@@ -25,6 +25,7 @@ import '@ionic/react/css/display.css'
 
 /* Theme variables */
 import './theme/variables.scss'
+import './theme/glitch.scss'
 
 function App(): JSX.Element {
   const [selectedPage, setSelectedPage] = useState('')

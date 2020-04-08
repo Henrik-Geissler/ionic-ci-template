@@ -20,8 +20,8 @@ import React from 'react'
 import {RouteComponentProps} from 'react-router'
 import ExploreContainer from '../components/ExploreContainer'
 import {usePhotoGallery} from '../hooks/usePhotoGallery'
-import './Page.scss'
-function Page({match}: RouteComponentProps<{name: string}>): JSX.Element {
+import './Page1.scss'
+function Page1({match}: RouteComponentProps<{name: string}>): JSX.Element {
   const {photos, takePhoto} = usePhotoGallery()
 
   return (
