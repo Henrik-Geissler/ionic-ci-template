@@ -1,7 +1,7 @@
 import '../setupTests'
 import React from 'react'
 import {render} from '@testing-library/react'
-import Page from './Page1'
+import Page from './Page'
 import {createLocation, createMemoryHistory} from 'history'
 import {match as routerMatch} from 'react-router'
 import {BrowserRouter} from 'react-router-dom'

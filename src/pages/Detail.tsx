@@ -13,17 +13,20 @@ import {
   IonGrid,
   IonRow,
   IonCol,
+  IonLabel,
   IonImg,
   IonActionSheet,
+  IonButton,
+  IonCard,
+  IonCardTitle,
+  IonCardContent,
+  IonTextarea,
 } from '@ionic/react'
 import React from 'react'
 import {RouteComponentProps} from 'react-router'
-import ExploreContainer from '../components/ExploreContainer'
-import {usePhotoGallery} from '../hooks/usePhotoGallery'
-import './Page1.scss'
-function Page1({match}: RouteComponentProps<{name: string}>): JSX.Element {
-  const {photos, takePhoto} = usePhotoGallery()
-
+import {useSingleStyle} from '../hooks/useStyleGallery'
+function Detail({match}: RouteComponentProps<{name: string}>): JSX.Element {
+  const {style} = useSingleStyle(match.params.name)
   return (
     <IonPage>
       <IonHeader>
@@ -41,24 +44,11 @@ function Page1({match}: RouteComponentProps<{name: string}>): JSX.Element {
             <IonTitle size="large">{match.params.name}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonGrid>
-          <IonRow>
-            {photos.map((photo, index) => (
-              <IonCol size="6" key={index}>
-                <IonImg src={photo.base64 ?? photo.webviewPath} />
-              </IonCol>
-            ))}
-          </IonRow>
-        </IonGrid>
-        <ExploreContainer name={match.params.name} />
-        <IonFab vertical="bottom" horizontal="center" slot="fixed">
-          <IonFabButton onClick={() => takePhoto()}>
-            <IonIcon icon={camera}></IonIcon>
-          </IonFabButton>
-        </IonFab>
+
+        {style.snippet(style.css, style.default)}
       </IonContent>
     </IonPage>
   )
 }
 
-export default Page
+export default Detail

@@ -113,9 +113,6 @@ function Menu({selectedPage}: MenuProps): JSX.Element {
             </IonItem>
           ))}
         </IonList>
-        <div className="glitch" data-text="GLITCH">
-          GLITCH
-        </div>
       </IonContent>
     </IonMenu>
   )

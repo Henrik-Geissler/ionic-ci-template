@@ -1,5 +1,6 @@
 import Menu from './components/Menu'
-import Page from './pages/Page1'
+import Page from './pages/Page'
+import Detail from './pages/Detail'
 import React, {useState} from 'react'
 import {IonApp, IonRouterOutlet, IonSplitPane} from '@ionic/react'
 import {IonReactRouter} from '@ionic/react-router'
@@ -26,6 +27,11 @@ import '@ionic/react/css/display.css'
 /* Theme variables */
 import './theme/variables.scss'
 import './theme/glitch.scss'
+import './theme/neon.scss'
+import './theme/attention.scss'
+import './theme/shimmer.scss'
+import './theme/frozen.scss'
+import './theme/focus.scss'
 
 function App(): JSX.Element {
   const [selectedPage, setSelectedPage] = useState('')
@@ -41,6 +47,15 @@ function App(): JSX.Element {
               render={function (props): JSX.Element {
                 setSelectedPage(props.match.params.name)
                 return <Page {...props} />
+              }}
+              exact={true}
+            />
+
+            <Route
+              path="/style/:name"
+              render={function (props): JSX.Element {
+                setSelectedPage(props.match.params.name)
+                return <Detail {...props} />
               }}
               exact={true}
             />
