@@ -66,9 +66,9 @@ export function useStyleGallery() {
   const styles: Array<Style> = [
     {css: 'glitch', default: 'GLITCH', snippet: Glitch},
     {css: 'neon', default: 'NEON', snippet: Neon},
+    {css: 'attention', default: 'Attention', snippet: Attention},
     {css: 'glitch', default: 'NEON', snippet: Glitch},
     {css: 'neon', default: 'GLITCH', snippet: Neon},
-    {css: 'attention', default: 'Attention', snippet: Attention},
     {css: 'frozen', default: 'Frozen', snippet: Frozen},
     {css: 'focus', default: 'FOCUS', snippet: Focus},
   ]
@@ -78,7 +78,14 @@ export function useStyleGallery() {
   }
 }
 export function useSingleStyle(styleName: string) {
-  const style: Style = {css: 'glitch', default: 'GLITCH', snippet: Glitch}
+  let style: Style
+  if (styleName == 'glitch') {
+    style = {css: 'glitch', default: 'GLITCH', snippet: Glitch}
+  } else if (styleName == 'neon') {
+    style = {css: 'neon', default: 'NEON', snippet: Neon}
+  } else {
+    style = {css: 'attention', default: '⚠ Attention ⚠', snippet: Attention}
+  }
   const [content, setContent] = React.useState(style.default)
 
   //function setContent(str: string): void {}
@@ -91,6 +98,35 @@ export function useSingleStyle(styleName: string) {
         onIonChange={e => setContent(e.detail.value!)}
         autofocus={true}
       ></IonTextarea>
+    )
+  }
+
+  //function setContent(str: string): void {}
+  function Attention(css: string, def: string): JSX.Element {
+    return (
+      <IonTextarea
+        className={css}
+        data-text={content}
+        value={content}
+        onIonChange={e => setContent(e.detail.value!)}
+        autofocus={true}
+      ></IonTextarea>
+    )
+  }
+
+  function Neon(css: string, def: string): JSX.Element {
+    return (
+      <div className="text-effect">
+        <IonTextarea
+          className={css}
+          data-text={content}
+          value={content}
+          onIonChange={e => setContent(e.detail.value!)}
+          autofocus={true}
+        ></IonTextarea>
+        <div className="gradient"></div>
+        <div className="spotlight"></div>
+      </div>
     )
   }
 

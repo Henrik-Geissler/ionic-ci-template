@@ -1,4 +1,4 @@
-package de.henrikgeissler.ionic;
+package com.henrik.ion;
 
 import android.os.Bundle;
 
