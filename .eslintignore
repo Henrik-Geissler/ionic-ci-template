@@ -38,7 +38,7 @@ yarn.lock
 
 # production
 /build
-*.css
+/src/**/*.css
 
 # misc
 .DS_Store
