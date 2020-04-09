@@ -52,6 +52,9 @@ export function useStyleGallery() {
       </IonLabel>
     )
   }
+  function Normal(css: string, def: string): JSX.Element {
+    return <IonLabel className={css}>{def}</IonLabel>
+  }
 
   function Focus(css: string, def: string): JSX.Element {
     return (
@@ -64,6 +67,7 @@ export function useStyleGallery() {
   }
 
   const styles: Array<Style> = [
+    {css: 'normal', default: 'normal', snippet: Normal},
     {css: 'glitch', default: 'GLITCH', snippet: Glitch},
     {css: 'neon', default: 'NEON', snippet: Neon},
     {css: 'attention', default: 'Attention', snippet: Attention},
@@ -83,12 +87,52 @@ export function useSingleStyle(styleName: string) {
     style = {css: 'glitch', default: 'GLITCH', snippet: Glitch}
   } else if (styleName == 'neon') {
     style = {css: 'neon', default: 'NEON', snippet: Neon}
-  } else {
+  } else if (styleName == 'attention') {
     style = {css: 'attention', default: '⚠ Attention ⚠', snippet: Attention}
+  } else {
+    style = {css: 'normal', default: 'Normal Text', snippet: Normal}
   }
   const [content, setContent] = React.useState(style.default)
 
+  /* function getHeight() {
+    return $('#dummy').prop('scrollHeight')
+  }
+
+  $('#textarea').keyup(function (event) {
+    while (getHeight() > $(this).height()) {
+      $(this).css('font-size', '-=1')
+      $('#dummy').css('font-size', '-=1')
+    }
+    if (event.keyCode == 8 || event.keyCode == 46) {
+      while (
+        getHeight() <= $(this).height() &&
+        $(this).css('font-size') <= '25px'
+      ) {
+        $(this).css('font-size', '+=1')
+        $('#dummy').css('font-size', '+=1')
+      }
+      $(this).css('font-size', '-=1')
+      $('#dummy').css('font-size', '-=1')
+    }
+  }) */
+
   //function setContent(str: string): void {}
+  function Normal(css: string, def: string): JSX.Element {
+    return (
+      <IonTextarea
+        className={css}
+        data-text={content}
+        value={content}
+        onIonChange={e => setContent(e.detail.value!)}
+        autofocus={true}
+      >
+        <textarea className="dummy">
+          <div></div>
+        </textarea>
+      </IonTextarea>
+    )
+  }
+
   function Glitch(css: string, def: string): JSX.Element {
     return (
       <IonTextarea
@@ -129,7 +173,6 @@ export function useSingleStyle(styleName: string) {
       </div>
     )
   }
-
   return {
     style,
   }

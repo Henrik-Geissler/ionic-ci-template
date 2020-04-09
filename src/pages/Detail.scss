@@ -1,0 +1,11 @@
+ion-textarea, ion-textarea div, ion-textarea textarea {
+  height: 100%;
+  resize: none;
+  overflow-y: hidden;
+}
+.dummy {
+    visibility: hidden;
+    height: 0px;
+    width: 100%;
+}
+

@@ -25,6 +25,7 @@ import {
 import React from 'react'
 import {RouteComponentProps} from 'react-router'
 import {useSingleStyle} from '../hooks/useStyleGallery'
+import './Detail.css'
 function Detail({match}: RouteComponentProps<{name: string}>): JSX.Element {
   const {style} = useSingleStyle(match.params.name)
   return (
