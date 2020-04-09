@@ -41,7 +41,6 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "watch-css": "yarn build-css && node-sass-chokidar **/*.* -o src/styles/css --watch",
     "start": "open -a Terminal \"`pwd`\" && PORT=3000 react-scripts start",
     "start-ci": "PORT=3000 react-scripts start",
     "build": "yarn build-css && react-scripts build",
@@ -64,7 +63,7 @@
     "prerelease-ci": "standard-version --prerelease alpha",
     "release": "git pull && standard-version",
     "eject": "react-scripts eject",
-    "android": "ionic build && ionic cap copy && ionic cap open android"
+    "android": "yarn && yarn build && ionic cap copy && ionic cap open android"
   },
   "browserslist": {
     "production": [
