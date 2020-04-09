@@ -2,7 +2,6 @@
 ### File Extension to Lint
 
 *.*
-!*.css
 !*.js
 !*.json
 !*.jsx
@@ -44,6 +43,7 @@ yarn.lock
 
 # production
 /build
+*.css
 
 # misc
 .DS_Store
