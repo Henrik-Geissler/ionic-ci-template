@@ -26,7 +26,6 @@ import {
   warningOutline,
   warningSharp,
 } from 'ionicons/icons'
-import './Menu.css'
 
 interface MenuProps extends RouteComponentProps {
   selectedPage: string
@@ -41,7 +40,7 @@ interface AppPage {
 
 const appPages: AppPage[] = [
   {
-    title: 'In2box',
+    title: 'Inbox',
     url: '/page/Inbox',
     iosIcon: mailOutline,
     mdIcon: mailSharp,
@@ -80,7 +79,7 @@ const appPages: AppPage[] = [
 
 const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders']
 
-const Menu: React.FunctionComponent<MenuProps> = ({selectedPage}) => {
+function Menu({selectedPage}: MenuProps): JSX.Element {
   return (
     <IonMenu contentId="main" type="overlay">
       <IonContent>
@@ -104,7 +103,6 @@ const Menu: React.FunctionComponent<MenuProps> = ({selectedPage}) => {
             )
           })}
         </IonList>
-
         <IonList id="labels-list">
           <IonListHeader>Labels</IonListHeader>
           {labels.map((label, index) => (
