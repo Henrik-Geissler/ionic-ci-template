@@ -10,8 +10,8 @@
     "type": "git",
     "url": "https://github.com/Henrik-Geissler/ionic-ci-template.git"
   },
-  "homepage": "https://henrik-geissler.github.io/ionic-ci-template",
   "dependencies": {
+    "@capacitor/android": "^2.0.0",
     "@capacitor/core": "^2.0.0",
     "@ionic/pwa-elements": "^1.5.1",
     "@ionic/react": "^5.0.7",
