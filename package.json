@@ -1,13 +1,13 @@
 {
   "name": "ionic-ci-template",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.2",
   "private": true,
   "dependencies": {
     "@capacitor/android": "^2.0.0",
     "@capacitor/core": "2.0.0",
     "@ionic/pwa-elements": "^1.5.1",
-    "@ionic/react-hooks": "^0.0.6",
     "@ionic/react": "^5.0.7",
+    "@ionic/react-hooks": "^0.0.6",
     "@ionic/react-router": "^5.0.7",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -32,13 +32,28 @@
     "node-sass": "^4.13.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "open -a Terminal \"`pwd`\" && PORT=3000 react-scripts start",
+    "start-ci": "PORT=3000 react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
+    "test": "yarn test-async:all",
+    "test:e2e": "NODE_ENV=debug cucumber-js -p default",
+    "test:unit": "react-scripts test --watchAll --coverage",
+    "test-async:all": "yarn test-async:unit && yarn test-async:e2e",
+    "test-async:e2e": "echo \"cd \"`pwd`\";yarn test:e2e;\" > \"`pwd`\"/test/E2E_Test.command; chmod +x \"`pwd`\"/test/E2E_Test.command; open \"`pwd`\"/test/E2E_Test.command",
+    "test-async:unit": "echo \"cd \"`pwd`\";yarn test:unit;exit;\" > \"`pwd`\"/test/UNIT_Test.command; chmod +x \"`pwd`\"/test/UNIT_Test.command; open \"`pwd`\"/test/UNIT_Test.command",
+    "test-ci:e2e": "cucumber-js -p default",
+    "test-ci:unit": "react-scripts test --watchAll=false --coverage --forceExit --detectOpenHandles --ci",
+    "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:gherkin-lint",
+    "lint:prettier": "./node_modules/.bin/prettier --write --config ./.prettierrc \"**/*.*\" ",
+    "lint:eslint": "./node_modules/.bin/eslint --fix \"**/*.*\" ",
+    "lint:gherkin-lint": "./node_modules/.bin/gherkin-lint -c ./.gherkin-lintrc \"**/*.feature\"",
+    "prerelease": "prerelease-ci",
+    "prerelease-ci": "standard-version --prerelease alpha",
+    "release": "git pull && standard-version",
+    "eject": "react-scripts eject",
+    "android":"ionic cap copy && ionic cap open android"
   },
   "browserslist": {
     "production": [
@@ -67,5 +82,13 @@
     "serve": "^11.3.0",
     "standard-version": "^7.1.0"
   },
-  "description": "An Ionic project"
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/{!(index),}.tsx"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(@ionic))/"
+    ]
+  },
+  "description": "A CI/CD setup of the Ionic Starter Template with Linting, UNIT & E2E Testing and Continuous Delivery"
 }
