@@ -43,6 +43,9 @@ jobs:
       - name: Run Linter Gherkin
         run: yarn lint:gherkin-lint
 
+      - name: Run Linter Sass
+        run: yarn lint:sass-lint
+
       - name: Commit Linter Changes
         run: |
           git config --local user.email "action@github.com"
