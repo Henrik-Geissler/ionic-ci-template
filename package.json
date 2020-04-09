@@ -12,9 +12,7 @@
   },
   "homepage": "https://henrik-geissler.github.io/ionic-ci-template",
   "dependencies": {
-    "@capacitor/android": "^2.0.0",
     "@capacitor/core": "^2.0.0",
-    "@capacitor/ios": "^2.0.0",
     "@ionic/pwa-elements": "^1.5.1",
     "@ionic/react": "^5.0.7",
     "@ionic/react-hooks": "^0.0.6",
@@ -45,7 +43,7 @@
   "scripts": {
     "start": "open -a Terminal \"`pwd`\" && PORT=3000 react-scripts start",
     "start-ci": "PORT=3000 react-scripts start",
-    "build": "react-scripts build && ionic cap copy",
+    "build": "react-scripts build",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "test": "yarn test-async:all",
@@ -63,7 +61,8 @@
     "prerelease": "prerelease-ci",
     "prerelease-ci": "standard-version --prerelease alpha",
     "release": "git pull && standard-version",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "android":"ionic cap copy && ionic cap open android"
   },
   "browserslist": {
     "production": [
