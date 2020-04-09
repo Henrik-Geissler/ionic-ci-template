@@ -1,68 +1,37 @@
 {
   "name": "ionic-ci-template",
-  "version": "0.0.1-alpha.2",
+  "version": "0.0.1",
   "private": true,
-  "author": {
-    "name": "Henrik Geissler"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Henrik-Geissler/ionic-ci-template.git"
-  },
-  "homepage": "https://henrik-geissler.github.io/ionic-ci-template",
   "dependencies": {
-    "@capacitor/core": "^2.0.0",
-    "@ionic/pwa-elements": "^1.5.1",
+    "@capacitor/android": "^2.0.0",
+    "@capacitor/core": "2.0.0",
     "@ionic/react": "^5.0.7",
-    "@ionic/react-hooks": "^0.0.6",
     "@ionic/react-router": "^5.0.7",
-    "@testing-library/jest-dom": "^5.3.0",
-    "@testing-library/react": "^10.0.2",
-    "@testing-library/user-event": "^10.0.1",
-    "@types/jest": "^25.2.1",
-    "@types/node": "^13.11.0",
-    "@types/puppeteer": "^2.0.1",
-    "@types/react": "^16.9.32",
-    "@types/react-dom": "^16.9.6",
-    "@types/react-router": "^5.1.5",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^8.0.3",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^12.12.24",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-router": "^5.1.4",
     "@types/react-router-dom": "^5.1.3",
-    "@typescript-eslint/eslint-plugin": "^2.26.0",
-    "@typescript-eslint/parser": "^2.26.0",
-    "compass-mixins": "^0.12.10",
-    "eslint-plugin-react": "^7.19.0",
-    "ionicons": "^5.0.1",
-    "node-sass": "^4.13.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "ionicons": "^5.0.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1",
-    "typescript": "^3.8.3"
+    "react-scripts": "3.4.0",
+    "typescript": "3.7.4"
   },
   "scripts": {
-    "start": "open -a Terminal \"`pwd`\" && PORT=3000 react-scripts start",
-    "start-ci": "PORT=3000 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
-    "test": "yarn test-async:all",
-    "test:e2e": "NODE_ENV=debug cucumber-js -p default",
-    "test:unit": "react-scripts test --watchAll --coverage",
-    "test-async:all": "yarn test-async:unit && yarn test-async:e2e",
-    "test-async:e2e": "echo \"cd \"`pwd`\";yarn test:e2e;\" > \"`pwd`\"/test/E2E_Test.command; chmod +x \"`pwd`\"/test/E2E_Test.command; open \"`pwd`\"/test/E2E_Test.command",
-    "test-async:unit": "echo \"cd \"`pwd`\";yarn test:unit;exit;\" > \"`pwd`\"/test/UNIT_Test.command; chmod +x \"`pwd`\"/test/UNIT_Test.command; open \"`pwd`\"/test/UNIT_Test.command",
-    "test-ci:e2e": "cucumber-js -p default",
-    "test-ci:unit": "react-scripts test --watchAll=false --coverage --forceExit --detectOpenHandles --ci",
-    "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:gherkin-lint",
-    "lint:prettier": "./node_modules/.bin/prettier --write --config ./.prettierrc \"**/*.*\" ",
-    "lint:eslint": "./node_modules/.bin/eslint --fix \"**/*.*\" ",
-    "lint:gherkin-lint": "./node_modules/.bin/gherkin-lint -c ./.gherkin-lintrc \"**/*.feature\"",
-    "prerelease": "prerelease-ci",
-    "prerelease-ci": "standard-version --prerelease alpha",
-    "release": "git pull && standard-version",
-    "eject": "react-scripts eject",
-    "android":"ionic cap copy && ionic cap open android"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -77,27 +46,7 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "^2.0.0",
-    "codecov": "^3.6.5",
-    "cucumber": "^6.0.5",
-    "cucumber-pretty": "^6.0.0",
-    "expect": "^25.2.7",
-    "gh-pages": "^2.2.0",
-    "gherkin-lint": "^4.0.1",
-    "ionic": "^5.4.16",
-    "pixelmatch": "^5.1.0",
-    "prettier": "^2.0.2",
-    "puppeteer": "^2.1.1",
-    "serve": "^11.3.0",
-    "standard-version": "^7.1.0"
+    "@capacitor/cli": "2.0.0"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/{!(index),}.tsx"
-    ],
-    "transformIgnorePatterns": [
-      "node_modules/(?!(@ionic))/"
-    ]
-  },
-  "description": "A CI/CD setup of the Ionic Starter Template with Linting, UNIT & E2E Testing and Continuous Delivery"
+  "description": "An Ionic project"
 }
