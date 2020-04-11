@@ -19,7 +19,7 @@ import {
   IonTextarea,
 } from '@ionic/react'
 
-export function useStyleGallery() {
+export function useStyleGallery(filter: string) {
   function Neon(css: string, def: string): JSX.Element {
     return (
       <div className="text-effect">

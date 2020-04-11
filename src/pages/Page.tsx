@@ -1,4 +1,3 @@
-import {camera, trash, close} from 'ionicons/icons'
 import {
   IonButtons,
   IonContent,
@@ -24,42 +23,16 @@ import {
 import React from 'react'
 import {RouteComponentProps} from 'react-router'
 import ExploreContainer from '../components/ExploreContainer'
-import {useStyleGallery} from '../hooks/useStyleGallery'
+import ListContainer from '../components/ListContainer'
+import Header from '../components/Header'
 import './Page.css'
 function Page({match}: RouteComponentProps<{name: string}>): JSX.Element {
-  const {styles} = useStyleGallery()
-
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
-          <IonTitle>{match.params.name}</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <Header name={match.params.name} />
 
       <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">{match.params.name}</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonGrid>
-          <IonRow>
-            {styles.map((style, index) => (
-              <IonCol size="12" key={index}>
-                <IonCard routerLink={'/style/' + style.css}>
-                  <IonCardTitle>{style.css}</IonCardTitle>
-                  <IonCardContent>
-                    {style.snippet(style.css, style.default)}
-                  </IonCardContent>
-                </IonCard>
-              </IonCol>
-            ))}
-          </IonRow>
-        </IonGrid>
+        <ListContainer />
         <ExploreContainer name={match.params.name} />
         {/*         <IonFab vertical="bottom" horizontal="center" slot="fixed">
           <IonFabButton onClick={() => takePhoto()}>
