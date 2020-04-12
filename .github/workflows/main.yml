@@ -53,6 +53,9 @@ jobs:
           git add --all
           git diff-index --quiet HEAD || git commit -m "ci(lint):  ${{github.event.commits[0].message}}"
 
+      - name: Build App
+        run: yarn build
+        
       - name: Run Jest UNIT Tests
         run: yarn test-ci:unit
 
@@ -64,9 +67,6 @@ jobs:
 
       - name: Add codecov report
         run: ./node_modules/.bin/codecov -t ${{secrets.CODECOV_TOKEN}}
-
-      - name: Build App
-        run: yarn build
 
       - name: Host App locally
         run: yarn start-ci & (sleep 30 && exit)
