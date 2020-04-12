@@ -1,5 +1,5 @@
 {
-  "appId": "de.henrik-geissler.ionic-ci-template",
+  "appId": "io.ionic.starter",
   "appName": "ionic-ci-template",
   "bundledWebRuntime": false,
   "npmClient": "yarn",

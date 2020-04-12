@@ -10,8 +10,8 @@
     "type": "git",
     "url": "https://github.com/Henrik-Geissler/ionic-ci-template.git"
   },
-  "homepage": "https://henrik-geissler.github.io/ionic-ci-template",
   "dependencies": {
+    "@capacitor/android": "^2.0.0",
     "@capacitor/core": "^2.0.0",
     "@ionic/pwa-elements": "^1.5.1",
     "@ionic/react": "^5.0.7",
@@ -59,7 +59,8 @@
     "prerelease": "prerelease-ci",
     "prerelease-ci": "standard-version --prerelease alpha",
     "release": "git pull && standard-version",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "android": "yarn && yarn build && ionic cap copy && ionic cap open android"
   },
   "browserslist": {
     "production": [
@@ -92,7 +93,9 @@
     "collectCoverageFrom": [
       "src/**/{!(index),}.tsx"
     ],
-    "transformIgnorePatterns":["/node_modules/"]
+    "transformIgnorePatterns": [
+      "node_modules/(?!(@ionic))/"
+    ]
   },
   "description": "A CI/CD setup of the Ionic Starter Template with Linting, UNIT & E2E Testing and Continuous Delivery"
 }
