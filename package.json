@@ -31,6 +31,7 @@
     "@typescript-eslint/parser": "^2.26.0",
     "eslint-plugin-react": "^7.19.0",
     "ionicons": "^5.0.1",
+    "node-sass-chokidar": "^1.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router": "^5.1.2",
@@ -41,7 +42,8 @@
   "scripts": {
     "start": "open -a Terminal \"`pwd`\" && PORT=3000 react-scripts start",
     "start-ci": "PORT=3000 react-scripts start",
-    "build": "react-scripts build",
+    "build": "yarn build-css && react-scripts build",
+    "build-css": "node-sass-chokidar src/ -o src/ --recursive && node-sass-chokidar public/ -o public/ --recursive",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "test": "yarn test-async:all",
