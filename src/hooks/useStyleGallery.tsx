@@ -1,12 +1,10 @@
 export function useStyleGallery(filter: string): Array<Style> {
   const styles: Array<Style> = [
     {css: 'normal', default: 'normal'},
+    {css: 'attention', default: 'Attention'},
+    {css: 'frozen', default: 'Frozen'},
     {css: 'glitch', default: 'GLITCH'},
     {css: 'neon', default: 'NEON'},
-    {css: 'attention', default: 'Attention'},
-    {css: 'glitch', default: 'NEON'},
-    {css: 'neon', default: 'GLITCH'},
-    {css: 'frozen', default: 'Frozen'},
     {css: 'focus', default: 'FOCUS'},
   ]
   return styles
