@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.1-alpha.3](https://github.com/Henrik-Geissler/ionic-ci-template/compare/v0.0.1-alpha.2...v0.0.1-alpha.3) (2020-04-12)
+
+
+### Features
+
+* **Android:** Added Build Scripts ([1595ea0](https://github.com/Henrik-Geissler/ionic-ci-template/commit/1595ea082ca368679103813fcae3cede79739fff))
+* **PhotoGallery:** Created some Example Styles ([368b7f5](https://github.com/Henrik-Geissler/ionic-ci-template/commit/368b7f5ca37829bc057b32c987ef618b0493a18a))
+* **Sass:** Added Sass Linter ([4aa32d1](https://github.com/Henrik-Geissler/ionic-ci-template/commit/4aa32d162f9fd6a6c0d356c6b26f3f8ebfd83ea8))
+* **Sass:** Added Sass Support ([74b3e8a](https://github.com/Henrik-Geissler/ionic-ci-template/commit/74b3e8a6c7667e36d242c16d68c17f784539be46))
+* **StyleGallery:** Added Components for Style Gallery ([3c12c93](https://github.com/Henrik-Geissler/ionic-ci-template/commit/3c12c93f6ab2cc5c21d059e34cd84eedcc4cee0c))
+* **StyleGallery:** Added Gallery Hooks & Components ([60065a3](https://github.com/Henrik-Geissler/ionic-ci-template/commit/60065a3a2a02385d508e1ff75afd1f5a858e77c7))
+
+
+### Bug Fixes
+
+* **PhotoGallery:** Removed Photo Gallery ([091c3d7](https://github.com/Henrik-Geissler/ionic-ci-template/commit/091c3d7e319dd53ff55f72e0f10a87300e73e46d))
+* **Workflow:** Build CSS before Unit Testing ([365bfa3](https://github.com/Henrik-Geissler/ionic-ci-template/commit/365bfa345a7112ee24f74ccddc217f85147c4e7e))
+* **Workflow:** Don't treat Warnings as Errors ([2055057](https://github.com/Henrik-Geissler/ionic-ci-template/commit/2055057cb55d73e5964c3ceeaf990ca73b7d76f3))
+
 ### [0.0.1-alpha.2](https://github.com/Henrik-Geissler/ionic-ci-template/compare/v0.0.1-alpha.1...v0.0.1-alpha.2) (2020-04-07)
 
 ### Bug Fixes
