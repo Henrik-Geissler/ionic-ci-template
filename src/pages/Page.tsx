@@ -32,7 +32,7 @@ function Page({match}: RouteComponentProps<{name: string}>): JSX.Element {
       <Header name={match.params.name} />
 
       <IonContent>
-        <ListContainer />
+        <ListContainer name={match.params.name} />
         <ExploreContainer name={match.params.name} />
         {/*         <IonFab vertical="bottom" horizontal="center" slot="fixed">
           <IonFabButton onClick={() => takePhoto()}>

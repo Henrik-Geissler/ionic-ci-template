@@ -2,7 +2,7 @@
 $color1: red
 $color2: blue
 
-.text-effect
+.styleWrapper2
   overflow: hidden
   position: relative
 
@@ -39,8 +39,8 @@ $color2: blue
     mix-blend-mode: difference
 
 // Position our two effect layers
-.gradient,
-.spotlight
+.beyond1,
+.beyond2
   position: absolute
   top: 0
   left: 0
@@ -50,13 +50,13 @@ $color2: blue
   z-index: 10
 
 // Add the colors
-.gradient
+.beyond1
   background: linear-gradient(45deg, $color1, $color2)
 
   // Multiply mode will paint only the white text
   mix-blend-mode: multiply
 
-.spotlight
+.beyond2
   animation: light 5s infinite linear
 
   // These are the lights, color-dodge needs a black bg for optimum effect

@@ -26,12 +26,6 @@ import '@ionic/react/css/display.css'
 
 /* Theme variables */
 import './theme/variables.css'
-import './theme/glitch.css'
-import './theme/neon.css'
-import './theme/attention.css'
-import './theme/shimmer.css'
-//import './theme/frozen.css'
-import './theme/focus.css'
 
 function App(): JSX.Element {
   const [selectedPage, setSelectedPage] = useState('')

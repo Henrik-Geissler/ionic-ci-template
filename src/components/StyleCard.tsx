@@ -22,21 +22,28 @@ import {
   IonCardContent,
   IonTextarea,
 } from '@ionic/react'
-
+import Style from './Style'
 function StyleCard(props: any): JSX.Element {
   return (
-    <IonCard routerLink={'/style/' + props.style.css}>
-      <IonCardTitle>{props.style.css}</IonCardTitle>
-      <IonCardContent>
-        {props.style.snippet(props.style.css, props.style.default)}
-      </IonCardContent>
-    </IonCard>
+    <IonCol size="12">
+      <IonCard routerLink={'/style/' + props.style.css}>
+        <IonCardTitle>{props.style.css}</IonCardTitle>
+        <IonCardContent>
+          <Style name={props.style.css} />
+          <div className="styleWrapper1">
+            <div className="styleWrapper2">
+              <IonLabel
+                className={props.style.css}
+                data-text={props.style.default}
+              ></IonLabel>
+              <div className="beyond1"></div>
+              <div className="beyond2"></div>
+            </div>
+          </div>
+        </IonCardContent>
+      </IonCard>
+    </IonCol>
   )
-}
-export interface Style {
-  css: string
-  default: string
-  snippet: (css: string, def: string) => JSX.Element
 }
 
 export default StyleCard

@@ -34,7 +34,7 @@ body
   background: $backgroundColor
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif
 
-.focus
+.styleWrapper1
   font-size: 3rem
   text-transform: uppercase
   color: white
@@ -57,14 +57,14 @@ body
     border-bottom: 2px solid
     animation: mask-move $animationProps
 
-  &--mask
-    overflow: hidden
-    position: absolute
-    width: $maskSize
-    height: 100%
-    top: 0
-    left: 0
-    background: $backgroundColor
-    animation: mask-move $animationProps
-    &-inner
-      animation: mask-inner-move $animationProps
+.styleWrapper2
+  overflow: hidden
+  position: absolute
+  width: $maskSize
+  height: 100%
+  top: 0
+  left: 0
+  background: $backgroundColor
+  animation: mask-move $animationProps
+.focus
+  animation: mask-inner-move $animationProps

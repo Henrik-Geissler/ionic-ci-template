@@ -26,7 +26,7 @@ import {useSingleStyle} from '../hooks/useStyleGallery'
 import StyleInput from './StyleInput'
 
 function InputContainer(props: any): JSX.Element {
-  const {style} = useSingleStyle(props.name)
+  const style = useSingleStyle(props.name)
   return <StyleInput style={style} />
 }
 
