@@ -4,16 +4,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.1-alpha.2](https://github.com/Henrik-Geissler/ionic-ci-template/compare/v0.0.1-alpha.1...v0.0.1-alpha.2) (2020-04-07)
 
-
 ### Bug Fixes
 
-* **e2e:** Don't autoclose Test ([cb7405e](https://github.com/Henrik-Geissler/ionic-ci-template/commit/cb7405e756c4d5ddca09a8ab1fa4103d8bef665b))
-
+- **e2e:** Don't autoclose Test ([cb7405e](https://github.com/Henrik-Geissler/ionic-ci-template/commit/cb7405e756c4d5ddca09a8ab1fa4103d8bef665b))
 
 ### Documentation
 
-* **README:** Correct misstyping ([c2d6e6f](https://github.com/Henrik-Geissler/ionic-ci-template/commit/c2d6e6f0a864686610a04f8f3ca7bd92dfec15e0))
-* **README:** Remove release batch ([bac05ad](https://github.com/Henrik-Geissler/ionic-ci-template/commit/bac05ad7052f06de9ee43b241f23631d09ae38b1))
+- **README:** Correct misstyping ([c2d6e6f](https://github.com/Henrik-Geissler/ionic-ci-template/commit/c2d6e6f0a864686610a04f8f3ca7bd92dfec15e0))
+- **README:** Remove release batch ([bac05ad](https://github.com/Henrik-Geissler/ionic-ci-template/commit/bac05ad7052f06de9ee43b241f23631d09ae38b1))
 
 ### [0.0.1-alpha.1](https://github.com/Henrik-Geissler/ionic-ci-template/compare/v0.0.1-alpha.0...v0.0.1-alpha.1) (2020-04-07)
 
