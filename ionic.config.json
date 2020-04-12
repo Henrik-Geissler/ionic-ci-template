@@ -1,7 +1,0 @@
-{
-  "name": "ionic-ci-template",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
-}

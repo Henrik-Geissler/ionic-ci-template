@@ -1,8 +1,0 @@
-{
-  "name": "ionic-ci-template",
-  "baseref": "master",
-  "tarignore": ["node_modules", "yarn.lock", "www"],
-  "scripts": {
-    "test": "yarn run build"
-  }
-}
