@@ -45,7 +45,7 @@
     "start": "open -a Terminal \"`pwd`\" && PORT=3000 react-scripts start",
     "start-ci": "PORT=3000 react-scripts start",
     "build": "yarn build-css && react-scripts build",
-    "build-css": "node-sass-chokidar src/ -o src/ --recursive",
+    "build-css": "node-sass-chokidar src/ -o src/ --recursive && node-sass-chokidar public/ -o public/ --recursive",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "test": "yarn test-async:all",

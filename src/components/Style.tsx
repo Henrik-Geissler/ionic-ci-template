@@ -1,13 +1,13 @@
 import React from 'react'
-import '../theme/glitch.css'
-import '../theme/neon.css'
-import '../theme/attention.css'
-import '../theme/shimmer.css'
-//import '../theme/frozen.css'
-import '../theme/focus.css'
-
+import './Style.css'
 function Style(props: any): JSX.Element {
-  return <style></style>
+  return (
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href={'assets/styles/' + props.name + '.css'}
+    ></link>
+  )
 }
 
 export default Style

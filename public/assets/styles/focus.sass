@@ -34,14 +34,14 @@ body
   background: $backgroundColor
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif
 
-.styleWrapper1
+.focus.outerWrapper
   font-size: 3rem
   text-transform: uppercase
   color: white
   letter-spacing: .2rem
   line-height: 1
   position: relative
-  width: $componentSize
+  //width: $componentSize
   &:before
     content: 'Focus'
     filter: blur(3px)
@@ -57,7 +57,7 @@ body
     border-bottom: 2px solid
     animation: mask-move $animationProps
 
-.styleWrapper2
+.focus.innerWrapper
   overflow: hidden
   position: absolute
   width: $maskSize
@@ -66,5 +66,5 @@ body
   left: 0
   background: $backgroundColor
   animation: mask-move $animationProps
-.focus
+.focus.styleTarget
   animation: mask-inner-move $animationProps

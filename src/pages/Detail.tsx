@@ -25,7 +25,6 @@ import React from 'react'
 import {RouteComponentProps} from 'react-router'
 import InputContainer from '../components/InputContainer'
 import Header from '../components/Header'
-import './Detail.css'
 function Detail({match}: RouteComponentProps<{name: string}>): JSX.Element {
   return (
     <IonPage>

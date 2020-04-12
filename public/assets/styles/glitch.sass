@@ -2,9 +2,8 @@
 body
   font-family: 'Varela', sans-serif
 
-.glitch
+.glitch.styleTarget
   color: white
-  font-size: 100px
   position: relative
   background: black
   margin: 0 auto
@@ -15,7 +14,7 @@ body
     #{percentage($i*(1/$steps))}
       clip: rect(random(100)+px,9999px,random(100)+px,0)
 
-.glitch:after
+.glitch.styleTarget:after
   content: attr(data-text)
   position: absolute
   left: 2px
@@ -33,7 +32,7 @@ body
     #{percentage($i*(1/$steps))}
       clip: rect(random(100)+px,9999px,random(100)+px,0)
 
-.glitch:before
+.glitch.styleTarget:before
   content: attr(data-text)
   position: absolute
   left: -2px

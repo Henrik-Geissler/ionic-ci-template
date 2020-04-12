@@ -2,14 +2,14 @@
 $color1: red
 $color2: blue
 
-.styleWrapper2
+.neon.innerWrapper
   overflow: hidden
   position: relative
 
   // The blend modes mute the colors, so let's bump them up
   filter: contrast(110%) brightness(190%)
 
-.neon
+.neon.styleTarget
   position: relative
 
   // Only works on a black background, sorry
@@ -39,8 +39,8 @@ $color2: blue
     mix-blend-mode: difference
 
 // Position our two effect layers
-.beyond1,
-.beyond2
+.neon.beyond1,
+.neon.beyond2
   position: absolute
   top: 0
   left: 0
@@ -50,13 +50,13 @@ $color2: blue
   z-index: 10
 
 // Add the colors
-.beyond1
+.neon.beyond1
   background: linear-gradient(45deg, $color1, $color2)
 
   // Multiply mode will paint only the white text
   mix-blend-mode: multiply
 
-.beyond2
+.neon.beyond2
   animation: light 5s infinite linear
 
   // These are the lights, color-dodge needs a black bg for optimum effect
@@ -74,8 +74,9 @@ $color2: blue
 //=== Pen styling, ignore
 
 // Style text
-.neon
-  font: 700 220px 'Lato', sans-serif
+.neon.styleTarget
+  font-weigth: 700
+  font-family: 'Lato', sans-serif
   text-transform: uppercase
   text-align: center
   margin: 0

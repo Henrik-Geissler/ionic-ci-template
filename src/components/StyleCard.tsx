@@ -23,6 +23,7 @@ import {
   IonTextarea,
 } from '@ionic/react'
 import Style from './Style'
+import './StyleCard.css'
 function StyleCard(props: any): JSX.Element {
   return (
     <IonCol size="12">
@@ -30,14 +31,14 @@ function StyleCard(props: any): JSX.Element {
         <IonCardTitle>{props.style.css}</IonCardTitle>
         <IonCardContent>
           <Style name={props.style.css} />
-          <div className="styleWrapper1">
-            <div className="styleWrapper2">
+          <div className={props.style.css + ' outerWrapper'}>
+            <div className={props.style.css + ' innerWrapper'}>
               <IonLabel
-                className={props.style.css}
+                className={props.style.css + ' styleTarget'}
                 data-text={props.style.default}
               ></IonLabel>
-              <div className="beyond1"></div>
-              <div className="beyond2"></div>
+              <div className={props.style.css + ' beyond1'}></div>
+              <div className={props.style.css + ' beyond2'}></div>
             </div>
           </div>
         </IonCardContent>
