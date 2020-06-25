@@ -34,36 +34,36 @@ jobs:
       - name: Install Packages
         run: yarn install 
 
-      - name: Run Linter ESLint
-        run: yarn lint:eslint
+#      - name: Run Linter ESLint
+ #       run: yarn lint:eslint
 
-      - name: Run Linter Prettier
-        run: yarn lint:prettier 
+  #    - name: Run Linter Prettier
+   #     run: yarn lint:prettier 
 
-      - name: Run Linter Gherkin
-        run: yarn lint:gherkin-lint
+    #  - name: Run Linter Gherkin
+     #   run: yarn lint:gherkin-lint
 
-      - name: Run Linter Sass
-        run: yarn lint:sass-lint
+      #- name: Run Linter Sass
+       # run: yarn lint:sass-lint
 
-      - name: Commit Linter Changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "CI: Linter"
-          git add --all
-          git diff-index --quiet HEAD || git commit -m "ci(lint):  ${{github.event.commits[0].message}}"
+      #- name: Commit Linter Changes
+       # run: |
+        #  git config --local user.email "action@github.com"
+         # git config --local user.name "CI: Linter"
+          #git add --all
+          #git diff-index --quiet HEAD || git commit -m "ci(lint):  ${{github.event.commits[0].message}}"
 
       - name: Build App
         run: yarn build
         
-      - name: Run Jest UNIT Tests
-        run: yarn test-ci:unit
+     # - name: Run Jest UNIT Tests
+      #  run: yarn test-ci:unit
 
-      - name: Upload test coverage as artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: coverage
-          path: coverage
+     # - name: Upload test coverage as artifact
+      #  uses: actions/upload-artifact@v1
+       # with:
+        #  name: coverage
+         # path: coverage
 
       - name: Add codecov report
         run: ./node_modules/.bin/codecov -t ${{secrets.CODECOV_TOKEN}}
@@ -77,8 +77,8 @@ jobs:
         run: |
           sed -i '' 's/headless: false/headless: true/g' features/support/scope/BrowserScope.js
 
-      - name: Run Puppeteer E2E Tests
-        run: yarn test-ci:e2e
+#      - name: Run Puppeteer E2E Tests
+ #       run: yarn test-ci:e2e
 
       - name: Setup Files for Commit
         run: |
